@@ -14,7 +14,7 @@ body {
 }
 img, svg {
   display: block;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 input, button, textarea, select {
@@ -80,6 +80,10 @@ a {
     grid-template-rows: 1fr 3fr 1.5fr;
     gap: 3rem;
 
+    & img {
+      max-width: 80%;
+    }
+
 }
 
 .dashboard-header {
@@ -97,5 +101,38 @@ a {
     display: flex;
     gap: 0.5em;
     font-size: 1.3em;
+}
+
+.top-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1em;
+}
+
+.header-left {
+    display: grid;
+    gap: 2em;
+
+}
+.search-bar {
+    display: grid;
+    grid-template-columns: 32px 65%;
+    gap: 0.5em;
+}
+
+.user-header {
+    display: flex;
+
+    & img {
+      max-width: 90%;
+    }
+
+    & .welcome-user {
+      align-self: center;
+    }
+}
+
+.user-name {
+    font-weight: bold;
 }
 
