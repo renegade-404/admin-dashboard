@@ -80,10 +80,6 @@ a {
     grid-template-rows: 1fr 3fr 1.5fr;
     gap: 3rem;
 
-    & img {
-      max-width: 80%;
-    }
-
 }
 
 .dashboard-header {
@@ -97,10 +93,16 @@ a {
     font-size: 2em;
 }
 
-.navi-list li, .navi-settings li {
+.navi-list li,
+.navi-settings li {
     display: flex;
     gap: 0.5em;
     font-size: 1.3em;
+}
+
+.navi-icon img,
+.user-header .user-icon {
+  max-width: 80%;
 }
 
 .top-header {
@@ -123,10 +125,6 @@ a {
 .user-header {
     display: flex;
 
-    & img {
-      max-width: 90%;
-    }
-
     & .welcome-user {
       align-self: center;
     }
@@ -134,5 +132,42 @@ a {
 
 .user-name {
     font-weight: bold;
+    font-size: 1.3em;
 }
 
+.smaller-icon {
+  width: 40px;
+
+}
+
+.user-info {
+  display: flex;
+  justify-content: right;
+  gap: 2em;
+  margin-right: 2em;
+  align-items: start
+
+}
+
+.no-bckgr {
+  background: none;
+  border: none;
+}
+
+.bell-icon,
+.no-bckgr {
+  max-width: 25px;
+}
+
+.header-right {
+  display: grid;
+  gap: 2em;
+}
+
+.user-actions {
+  display: flex;
+  gap: 3em;
+  margin-right: 2em;
+
+  justify-self: right;
+}
