@@ -1,0 +1,157 @@
+PLAN:
+
+Layout:
+2 columns. Left one is 3-4x smaller than the right one.
+
+Left column:
+A dashboard. Within the dashboard we have (from the top):
+    i. dashboard sign on the left and "Dashboard" text on the right;
+       they're bigger than lower dashboard elements.
+    ii. navigation elements: Home, Profile, Messages, History, Tasks,
+        Communities
+    iii. setting elements: Settings, Support, Privacy (there is a gap
+         between setting elements and navigation elements)
+
+Right column:
+A content column. Within the content column we have (from the top):
+    1. First column:
+        - divided into 2 columns:
+            Left column (2x bigger than right):
+                i. first row: search bar with magnifier on the left
+                ii. second row: profile's icon, hello message above profile's name which is bigger
+            Right column (from the left side):
+                i. first row: notification icon, profile's icon, profile's name
+                ii. second row: activity buttons: New, Upload, Share
+    2. Main content column
+        - divided into 2 columns:
+            Left column (2x bigger than right):
+                i. within there are 6 project boxes spread into 2 columns and 3 rows
+                ii. above the articles there is Your Projects sign
+                iii. each project box has a bigger title, smaller text content and 3 icon buttons situated at the right bottom side of the box: add do fave, add as seen, share
+            Right column:
+                - divided into two rows:
+                    First row:
+                        i. within there are 3 articles; each article has a bigger title; they're separated by a thin line
+                        ii. Above the row there is Announcements sign
+                    Second row:
+                        i. within there are 4 most popular profiles positioned in rows
+                        ii. each profile has its icon on the left; on the right there is a profile's name proceeded by @ and below it there is a short profile's message 
+
+Pseudocode:
+
+Main container:
+    - 2 grid columns. Left column is 3-4x smaller than the right one.
+
+    1. Left column:
+        .sidebar
+          display: grid
+          grid-template-rows: (1fr, 3fr, 1.5fr)
+          gap: 1em
+        
+        .dashboard-header:
+          - span.dashboard-icon
+          - p.dashboard-text "Dashboard"
+
+        .navi-dashboard
+          - ul.nav-list
+            - li.nav-item x6
+              - span.navi-icon
+              - a.navi-link
+
+        .navi-settings
+          - ul.setting-list
+            - li.settings-item x3
+              - span.navi-icon
+              - a.navi-link
+
+    2. Right column:
+        .top-header
+          display: grid
+          grid-template-columns: (2fr, 1fr)
+          justify-items: space-around
+
+          .header-left
+            display: grid
+            justify-items: space-around
+
+            - div.search-bar
+              span 2 columns
+              - span.magnifier-icon
+              - input.search-input
+
+            - div.user-actions-header
+              span 1 column
+              display: flex
+              - img.user-icon
+              - div.welcome-user
+                - p.welcome-message (smaller; welcome message)
+                - p.user-name (bigger; profile's name)
+            
+          .header-right
+            display: grid
+            gap: 0.5em
+     
+            - div.user-info
+              display: flex
+              - img.bell-icon
+              - img.user-icon
+              - p.user-name
+
+            - div.user-actions .button-group
+              display: flex
+              - button.new-project
+              - button.upload-project
+              - button.share-project
+
+        .main-content
+          display: grid (2fr, 1fr)
+          gap: 0.5em
+
+          .projects-section:
+
+            - p.projects-heading: "Your Projects"  
+
+            - div.projects-container
+              grid (auto-fit, minmax(150px, 1fr)):
+                each project-box:
+                  - h3.project-title
+                  - p.project-description
+                  - div.action-buttons .button-group
+                    position: bottom-right (with grid)
+                    display: flex
+                    gap: 0.5rem
+                    - button.favorite
+                    - button.seen
+                    - button.share
+
+            - section.news-bar
+              display: grid (1fr, 1fr)
+              gap: 0.5em
+
+              .announcements
+                - p.announcements-heading "Announcements"
+
+                - div.announcements-display
+                  display: grid
+                  x3:
+                  - h3.announcement-title
+                  - p.announcement-text (overflowing + ellipsis)
+
+              .trending
+                - p.trending-heading "Trending"
+                - display: grid (repeat(4, 1fr))
+                  each row:
+                    - img.user-icon
+                    - p.user-nickname
+                    - p.user-description
+
+
+Styling:
+
+.button-group:
+    display: flex
+    gap: 0.5rem
+
+.icon:
+    width: 1.5rem;
+    height: 1.5rem;
