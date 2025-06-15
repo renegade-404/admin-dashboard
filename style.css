@@ -1,0 +1,72 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+
+}
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: [left-column] 1fr [right-column] 4fr;
+}
+
+.left-column {
+    grid-column: left-column;
+    background-color: #914F1E;
+
+}
+
+.right-column {
+    grid-column: right-column;
+    background-color: #F7DCB9;
+
+}
+
+.sidebar {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1.5fr;
+    gap: 1em;
+}
+
+.dashboard-header {
+    
+}
