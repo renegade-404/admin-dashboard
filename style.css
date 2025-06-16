@@ -109,6 +109,8 @@ a {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1em;
+
+    margin: 0 2em 2em 1em;
 }
 
 .header-left {
@@ -124,10 +126,8 @@ a {
 
 .user-header {
     display: flex;
+    align-items: center;
 
-    & .welcome-user {
-      align-self: center;
-    }
 }
 
 .user-name {
@@ -142,9 +142,10 @@ a {
 
 .user-info {
   display: flex;
-  justify-content: right;
   gap: 2em;
   margin-right: 2em;
+
+  justify-content: right;
   align-items: start
 
 }
@@ -162,12 +163,13 @@ a {
 .header-right {
   display: grid;
   gap: 2em;
+
 }
 
 .user-actions {
   display: flex;
   gap: 3em;
-  margin-right: 2em;
+
 
   justify-self: right;
 }
