@@ -109,25 +109,36 @@ a {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1em;
-
     margin: 0 2em 2em 1em;
+
 }
 
 .header-left {
     display: grid;
     gap: 2em;
+    align-content: start;
 
 }
 .search-bar {
     display: grid;
     grid-template-columns: 32px 65%;
     gap: 0.5em;
+    margin-top: 0.7em;
+}
+
+.magnifier-icon {
+  width: 1.5em;
+  align-self: center;
+}
+
+#project-search {
+  background: #C1CFA1;
+  border-radius: 20px;
+  outline: none;
 }
 
 .user-header {
     display: flex;
-    align-items: center;
-
 }
 
 .user-name {
@@ -143,10 +154,9 @@ a {
 .user-info {
   display: flex;
   gap: 2em;
-  margin-right: 2em;
 
   justify-content: right;
-  align-items: start
+  align-items: center;
 
 }
 
@@ -170,6 +180,18 @@ a {
   display: flex;
   gap: 3em;
 
-
   justify-self: right;
+}
+
+.user-actions button {
+  padding: 2px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: #B5C18E;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: #914F1E;
+    color: white;
+  }
 }
