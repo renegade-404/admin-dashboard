@@ -72,7 +72,7 @@ a {
 }
 
 .left-column, .right-column {
-    padding: 1.5rem;
+  height: 100vh;
 }
 
 .sidebar {
@@ -80,13 +80,18 @@ a {
     grid-template-rows: 1fr 3fr 1.5fr;
     gap: 3rem;
 
+    align-items: center;
+    justify-content: center;
 }
 
 .dashboard-header {
     grid-row: 1;
-
     display: flex;
-    gap: 0.5em;
+    gap: 1em;
+
+    & .dashboard-icon {
+      flex: 0 0 17%;
+    }
 }
 
 .dashboard-text {
@@ -109,7 +114,9 @@ a {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1em;
-    margin: 0 2em 2em 1em;
+    align-content: center;
+
+    margin: 1em 2em 2em 1em;
 
 }
 
@@ -194,4 +201,44 @@ a {
     background-color: #914F1E;
     color: white;
   }
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 75% 1fr;
+  gap: 1em;
+
+  background-color: #DEAC80;
+  padding: 2em 0;
+}
+
+.projects-section {
+  display: grid;
+  align-content: start;
+  gap: 1em;
+
+  margin-left: 1em;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.5em;
+}
+
+.project-item {
+  background-color: white;
+  padding: 20px 30px;
+  border-left: 8px solid #914F1E;
+  border-radius: 10px;
+
+  display: grid;
+  gap: 0.7em;
+}
+
+.action-buttons {
+  justify-self: right;
+
+  display: flex;
+  gap: 0.7em;
 }
