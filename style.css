@@ -207,7 +207,6 @@ a {
 
   background-color: #DEAC80;
   padding: 2em;
-
 }
 
 .projects-section {
@@ -242,18 +241,26 @@ a {
 
 .news-bar {
   display: grid;
+  align-content: start;
   gap: 1em;
-
 }
 
 
+.announcements,
+.trending {
+  display: grid;
+  align-items: start;
+  gap: 1em;
+}
+
 .announcements-display,
 .trending-display {
-  /* margin-top: 0.9em; */
   background-color: white;
   border-radius: 10px;
   border: 3px solid #914F1E;
   padding: 10px;
+  height: 263px;
+  overflow: auto;
 }
 
 .announcement-item,
