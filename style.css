@@ -276,3 +276,11 @@ a {
   border-top: 1px solid #ccc;
 }
 
+.trending-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-description {
+  opacity: 50%;
+}
