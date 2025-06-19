@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Finger Paint";
+  src: url(fonts/fontkit/fingerpaint-regular-webfont.woff),
+       url(fonts/fontkit/fingerpaint-regular-webfont.woff2);
+  font-weight: 400;
+}
+
+:root {
+  --main-font: "Finger Paint";
+  --fallback-fonts: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -6,6 +20,7 @@
 }
 
 body {
+  font-family: var(--main-font), var(--fallback-fonts);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   width: 100%;
